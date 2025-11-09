@@ -1,94 +1,105 @@
 {
   "quiz1": [
     {
-      "mainWord": "apple",
-      "ans1": "A fruit that is red or green",
-      "ans2": "A kind of car",
-      "ans3": "A type of music",
-      "ans4": "A piece of furniture",
-      "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/apple--_gb_1.mp3",
-      "indexCorrectAns": 1
+      "mainWord": "Choose the right single onset for ...AT /...æt/",
+      "ans1": "A. c /k/",
+      "ans2": "B. C /c/",
+      "ans3": "C. b /b/",
+      "ans4": "D. f /f/",
+      "audioLink":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/c/cat/cat__/cat__gb_2.mp3" ,
+      "indexCorrectAns": 1,
+      "type":"singleOnset"
     },
     {
-      "mainWord": "river",
-      "ans1": "A large natural stream of water",
-      "ans2": "A mountain",
-      "ans3": "A desert",
-      "ans4": "A kind of fish",
-      "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/river--_gb_1.mp3",
-      "indexCorrectAns": 1
+      "mainWord": "Choose the right single onset for ...OG /...ɒɡ/",
+      "ans1": "A. p /p/",
+      "ans2": "B. g /g/",
+      "ans3": "C. f /f/",
+      "ans4": "D. d /d/ ",
+      "audioLink": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/d/dog/dog__/dog__gb_2.mp3",
+      "indexCorrectAns": 4,
+      "type":"singleOnset"
     },
     {
-      "mainWord": "chair",
-      "ans1": "A kind of bird",
-      "ans2": "A piece of furniture for sitting",
-      "ans3": "A type of food",
-      "ans4": "A musical instrument",
-      "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/chair--_gb_1.mp3",
-      "indexCorrectAns": 2
+      "mainWord": "Choose the right single onset for ...EN /...en/",
+      "ans1": "A. b /b/",
+      "ans2": "B. p /p/",
+      "ans3": "C. ʃ / ʃ/",
+      "ans4": "D. h /h/",
+      "audioLink":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/p/pen/pen__/pen__gb_2.mp3" ,
+      "indexCorrectAns": 2,
+      "type":"singleOnset"
     },
     {
-      "mainWord": "computer",
-      "ans1": "A device used for calculations and processing data",
-      "ans2": "A kind of fruit",
-      "ans3": "A book",
-      "ans4": "A car",
-      "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/computer--_gb_1.mp3",
-      "indexCorrectAns": 1
+      "mainWord": "Choose the right single onset for ...UN /...ʌn/",
+      "ans1": "A. t /t/",
+      "ans2": "B. f /f/",
+      "ans3": "C. s /s/",
+      "ans4": "D. ʃ / ʃ/",
+      "audioLink": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/sun/sun__/sun__gb_2.mp3",
+      "indexCorrectAns": 3,
+      "type":"singleOnset"
     },
     {
-      "mainWord": "elephant",
-      "ans1": "A large mammal with a trunk",
-      "ans2": "A small bird",
-      "ans3": "A kind of fish",
-      "ans4": "A reptile",
-      "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/elephant--_gb_1.mp3",
-      "indexCorrectAns": 1
+      "mainWord": "Choose the right double onset for ...OG /...ɒɡ/ (sai đáp án)",
+      "ans1": "A. pl /pl/",
+      "ans2": "B. bl /bl/",
+      "ans3": "C. fr /fr/",
+      "ans4": "D. gl /gl/",
+      "audioLink": 
+      "https://ssl.gstatic.com/dictionary/static/sounds/20200429/elephant--_gb_1.mp3",
+      "indexCorrectAns": 1,
+      "type":"doubleOnset"
     },
     {
-      "mainWord": "sun",
-      "ans1": "The star at the center of our solar system",
-      "ans2": "A planet",
-      "ans3": "A moon",
-      "ans4": "A comet",
+      "mainWord": "Choose the right double onset for ...ED /...ed/ (sai đáp án)",
+      "ans1": "A. sl /sl/",
+      "ans2": "B. bl /bl/",
+      "ans3": "C. pl /pl/",
+      "ans4": "D. sp /sp/",
       "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/sun--_gb_1.mp3",
-      "indexCorrectAns": 1
+      "indexCorrectAns": 2,
+      "type":"doubleOnset"
     },
     {
-      "mainWord": "teacher",
-      "ans1": "Someone who teaches students",
-      "ans2": "Someone who drives buses",
-      "ans3": "Someone who cooks food",
-      "ans4": "Someone who paints houses",
-      "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/teacher--_gb_1.mp3",
-      "indexCorrectAns": 1
+      "mainWord": "teaChoose the right double onset for ...AP /...æp/",
+      "ans1": "A. sn /sn/",
+      "ans2": "B. gr /gr/",
+      "ans3": "C. sm /sm/",
+      "ans4": "D. sl /sl/",
+      "audioLink": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/sna/snap_/snap__gb_1.mp3", 
+      "indexCorrectAns": 1,
+      "type":"doubleOnset"
     },
     {
-      "mainWord": "phone",
-      "ans1": "A device for making calls",
-      "ans2": "A musical instrument",
-      "ans3": "A car",
-      "ans4": "A kind of bird",
+      "mainWord": "Choose the right triple onset for ...AIN /...eɪn/ (sai đáp án)",
+      "ans1": "A. spr /spr",
+      "ans2": "B. str /str/",
+      "ans3": "C. /spl /spl/",
+      "ans4": "D. sml /sml/",
       "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/phone--_gb_1.mp3",
-      "indexCorrectAns": 1
+      "indexCorrectAns": 3,
+      "type":"tripleOnset"
     },
     {
-      "mainWord": "dog",
-      "ans1": "A domestic animal that barks",
-      "ans2": "A type of fish",
-      "ans3": "A kind of fruit",
-      "ans4": "A reptile",
-      "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/dog--_gb_1.mp3",
-      "indexCorrectAns": 1
+      "mainWord": "Choose the right triple onset for ...ING /...ɪŋ/",
+      "ans1": "A. scr /skr/",
+      "ans2": "B. str /str/",
+      "ans3": "C. spr /spr/",
+      "ans4": "D. spl /spl/",
+      "audioLink": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/spr/sprin/spring__gb_1.mp3",
+      "indexCorrectAns": 3,
+      "type":"tripleOnset"
     },
     {
-      "mainWord": "book",
-      "ans1": "A collection of written pages bound together",
-      "ans2": "A piece of furniture",
-      "ans3": "A drink",
-      "ans4": "A kind of car",
-      "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/book--_gb_1.mp3",
-      "indexCorrectAns": 1
+      "mainWord": "Choose the right triple onset for ...EET /...iːt/",
+      "ans1": "A. str /str/",
+      "ans2": "B. spl /spl/",
+      "ans3": "C. sch /stʃ/",
+      "ans4": "D. scr /skr/",
+      "audioLink": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/str/stree/street__gb_3.mp3",
+      "indexCorrectAns": 1,
+      "type":"tripleOnset"
     }
   ],
   "quiz2": [
