@@ -49,8 +49,8 @@ server.get('/oxford', async (req, res) => {
         const html = await response.text(); 
         let dataSyllableOxford = [];
         const { document } = parseHTML(html);
-        const proUKList = Array.from(document.querySelectorAll('.sound.audio_play_button.pron-uk ~ .phon'));
-        const proUSList = Array.from(document.querySelectorAll('.sound.audio_play_button.pron-us ~ .phon'));
+        const proUKList = Array.from(document.querySelectorAll('.symbols ~ .phonetics   .sound.audio_play_button.pron-uk.icon-audio ~ .phon'));
+        const proUSList = Array.from(document.querySelectorAll('.symbols ~ .phonetics   .sound.audio_play_button.pron-us.icon-audio ~ .phon'));
 
         const UKAudioList = Array.from(document.querySelectorAll('span .sound.audio_play_button.pron-uk'));
         const USAudioList = Array.from(document.querySelectorAll('span .sound.audio_play_button.pron-us'));
