@@ -2,7 +2,7 @@
 const jsonServer = require('json-server')
 const axios = require('axios');
 const cron = require('node-cron'); // Cài đặt cronJob
-
+const { parseHTML } = require('linkedom');
 const server = jsonServer.create()
 
 // Uncomment to allow write operations
@@ -25,11 +25,68 @@ server.use(jsonServer.rewriter({
     '/blog/:resource/:id/show': '/:resource/:id'
 }))
 
+server.get('/oxford', async (req, res) => {
+
+    const { word } = req.query;
+    const URL = `https://www.oxfordlearnersdictionaries.com/definition/english/${word}_1?q=${word}`;
+    // const URL= "https://www.oxfordlearnersdictionaries.com/definition/english/red_1?q=red"
+    try {
+        const response = await fetch(
+            URL,
+            {
+                method: "GET",
+                headers: {
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                    "Accept": "text/html",
+                },
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const html = await response.text(); 
+        let dataSyllableOxford = [];
+        const { document } = parseHTML(html);
+        const proUKList = Array.from(document.querySelectorAll('.sound.audio_play_button.pron-uk ~ .phon'));
+        const proUSList = Array.from(document.querySelectorAll('.sound.audio_play_button.pron-us ~ .phon'));
+
+        const UKAudioList = Array.from(document.querySelectorAll('span .sound.audio_play_button.pron-uk'));
+        const USAudioList = Array.from(document.querySelectorAll('span .sound.audio_play_button.pron-us'));
+        proUKList.forEach((pro, index) => {
+            // console.log("map===>",)
+            let syllableData = {
+                ipaTranscription: pro.textContent ?? "",
+                audio: UKAudioList.length > 0 ? (UKAudioList[index].getAttribute("data-src-mp3") ?? "") : "",
+                typeUSOrUK: "UK",
+                syllableArray: []
+            };
+            dataSyllableOxford.push(syllableData);
+        });
+        proUSList.forEach((pro, index) => {
+            let syllableData = {
+                ipaTranscription: pro.textContent ?? "",
+                audio: USAudioList.length > 0 ? (USAudioList[index].getAttribute("data-src-mp3") ?? "") : "",
+                typeUSOrUK: "US",
+                syllableArray: []
+            };
+            dataSyllableOxford.push(syllableData);
+        });
+
+        res.send(dataSyllableOxford); // gửi về trình duyệt
+    } catch (error) {
+        console.error("Fetch error:", error);
+        res.status(500).send({ message: error.message });
+    }
+
+});
+
 cron.schedule('*/10 * * * *', () => {
     console.log('Cron job running every 10 minutes');
 
     // Gửi một request bất kỳ tới server (có thể thay đổi endpoint)
-    axios.get('https://api-tinh-thanh-v1.onrender.com/')
+    axios.get('https://be-dictionary.onrender.com/quiz2')
         .then(response => {
             console.log('Data received:', response.data);
         })
