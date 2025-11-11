@@ -1,10 +1,10 @@
 {
   "quiz1": [
     {
-      "mainWord": "Choose and listen the right single onset for ",
+      "mainWord": "Listen and Choose the right single onset for ",
       "syllable":"...AT /...æt/",
       "ans1": "A. c /k/",
-      "ans2": "B. C /c/",
+      "ans2": "B. c /c/",
       "ans3": "C. b /b/",
       "ans4": "D. f /f/",
       "audioLink":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/c/cat/cat__/cat__gb_2.mp3" ,
@@ -12,7 +12,7 @@
       "type":"singleOnset"
     },
     {
-      "mainWord": "Choose and listen the right single onset for ",
+      "mainWord": "Listen and Choose the right single onset for ",
       "syllable":"...OG /...ɒɡ/",
       "ans1": "A. p /p/",
       "ans2": "B. g /g/",
@@ -23,7 +23,7 @@
       "type":"singleOnset"
     },
     {
-      "mainWord": "Choose and listen the right single onset for ",
+      "mainWord": "Listen and Choose the right single onset for ",
       "syllable":"...EN /...en/",
       "ans1": "A. b /b/",
       "ans2": "B. p /p/",
@@ -34,7 +34,7 @@
       "type":"singleOnset"
     },
     {
-      "mainWord": "Choose and listen the right single onset for ",
+      "mainWord": "Listen and Choose the right single onset for ",
       "syllable":"...UN /...ʌn/",
       "ans1": "A. t /t/",
       "ans2": "B. f /f/",
@@ -45,7 +45,7 @@
       "type":"singleOnset"
     },
     {
-      "mainWord": "Choose and listen the right double onset for ",
+      "mainWord": "Listen and Choose the right double onset for ",
       "syllable":"...OG /...ɒɡ/",
       "ans1": "A. pl /pl/",
       "ans2": "B. bl /bl/",
@@ -56,7 +56,7 @@
       "type":"doubleOnset"
     },
     {
-      "mainWord": "Choose and listen the right double onset for ",
+      "mainWord": "Listen and Choose the right double onset for ",
       "syllable":"...ED /...ed/",
       "ans1": "A. sl /sl/",
       "ans2": "B. bl /bl/",
@@ -67,7 +67,7 @@
       "type":"doubleOnset"
     },
     {
-      "mainWord": "teaChoose and listen the right double onset for ",
+      "mainWord": "Listen and Choose the right double onset for ",
       "syllable":"...AP /...æp/",
       "ans1": "A. sn /sn/",
       "ans2": "B. gr /gr/",
@@ -78,7 +78,7 @@
       "type":"doubleOnset"
     },
     {
-      "mainWord": "Choose and listen the right triple onset for ",
+      "mainWord": "Listen and Choose the right triple onset for ",
       "syllable":"...AIN /...eɪn/",
       "ans1": "A. spr /spr",
       "ans2": "B. str /str/",
@@ -89,7 +89,7 @@
       "type":"tripleOnset"
     },
     {
-      "mainWord": "Choose and listen the right triple onset for ",
+      "mainWord": "Listen and Choose the right triple onset for ",
       "syllable":"...ING /...ɪŋ/",
       "ans1": "A. scr /skr/",
       "ans2": "B. str /str/",
@@ -100,7 +100,7 @@
       "type":"tripleOnset"
     },
     {
-      "mainWord": "Choose and listen the right triple onset for ",
+      "mainWord": "Listen and Choose the right triple onset for ",
       "syllable":"...EET /...iːt/",
       "ans1": "A. str /str/",
       "ans2": "B. spl /spl/",
