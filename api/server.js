@@ -48,12 +48,32 @@ server.get('/oxford', async (req, res) => {
 
         const html = await response.text(); 
         let dataSyllableOxford = [];
+
+        // craw data from html
         const { document } = parseHTML(html);
         const proUKList = Array.from(document.querySelectorAll('.symbols ~ .phonetics   .sound.audio_play_button.pron-uk.icon-audio ~ .phon'));
         const proUSList = Array.from(document.querySelectorAll('.symbols ~ .phonetics   .sound.audio_play_button.pron-us.icon-audio ~ .phon'));
 
         const UKAudioList = Array.from(document.querySelectorAll('span .sound.audio_play_button.pron-uk'));
         const USAudioList = Array.from(document.querySelectorAll('span .sound.audio_play_button.pron-us'));
+
+        const wordLevelList = Array.from(document.querySelectorAll('.symbols a'));
+        let wordMeaningList = Array.from(document.querySelectorAll('.shcut-g span.def'));
+
+        wordMeaningList = wordMeaningList.map((word)=>word.textContent);
+            
+        // get world level
+        let wordLevel=null;
+        if( wordLevelList.length>0){
+            wordLevelString=wordLevelList[0].getAttribute("href");
+            let levelIndex= wordLevelString.lastIndexOf("level=")+6;
+            wordLevel= wordLevelString.substring(levelIndex, levelIndex +2);
+        }
+
+        // get word meaning
+        let wordMening;
+
+        // get sylable
         proUKList.forEach((pro, index) => {
             // console.log("map===>",)
             let syllableData = {
@@ -74,7 +94,11 @@ server.get('/oxford', async (req, res) => {
             dataSyllableOxford.push(syllableData);
         });
 
-        res.send(dataSyllableOxford); // gửi về trình duyệt
+        res.send({
+            dataSyllableOxford,
+            wordLevel,
+            wordMeaningList
+        }); // gửi về trình duyệt
     } catch (error) {
         console.error("Fetch error:", error);
         res.status(500).send({ message: error.message });
