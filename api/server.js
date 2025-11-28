@@ -4,6 +4,8 @@ const axios = require('axios');
 const cron = require('node-cron'); // Cài đặt cronJob
 const { parseHTML } = require('linkedom');
 const server = jsonServer.create()
+require('dotenv').config();
+const { GoogleGenAI } = require('@google/genai');
 
 // Uncomment to allow write operations
 // const fs = require('fs')
@@ -27,7 +29,8 @@ server.use(jsonServer.rewriter({
 
 server.get('/oxford', async (req, res) => {
 
-    const { word } = req.query;
+    let { word } = req.query;
+    word = word.toLowerCase.trim;
     const URL = `https://www.oxfordlearnersdictionaries.com/definition/english/${word}_1?q=${word}`;
     // const URL= "https://www.oxfordlearnersdictionaries.com/definition/english/red_1?q=red"
     try {
@@ -46,7 +49,7 @@ server.get('/oxford', async (req, res) => {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const html = await response.text(); 
+        const html = await response.text();
         let dataSyllableOxford = [];
 
         // craw data from html
@@ -60,14 +63,14 @@ server.get('/oxford', async (req, res) => {
         const wordLevelList = Array.from(document.querySelectorAll('.symbols a'));
         let wordMeaningList = Array.from(document.querySelectorAll('.shcut-g span.def'));
 
-        wordMeaningList = wordMeaningList.map((word)=>word.textContent);
-            
+        wordMeaningList = wordMeaningList.map((word) => word.textContent);
+
         // get world level
-        let wordLevel=null;
-        if( wordLevelList.length>0){
-            wordLevelString=wordLevelList[0].getAttribute("href");
-            let levelIndex= wordLevelString.lastIndexOf("level=")+6;
-            wordLevel= wordLevelString.substring(levelIndex, levelIndex +2);
+        let wordLevel = null;
+        if (wordLevelList.length > 0) {
+            wordLevelString = wordLevelList[0].getAttribute("href");
+            let levelIndex = wordLevelString.lastIndexOf("level=") + 6;
+            wordLevel = wordLevelString.substring(levelIndex, levelIndex + 2);
         }
 
         // get word meaning
@@ -98,13 +101,74 @@ server.get('/oxford', async (req, res) => {
             dataSyllableOxford,
             wordLevel,
             wordMeaningList
-        }); // gửi về trình duyệt
+        });
     } catch (error) {
         console.error("Fetch error:", error);
         res.status(500).send({ message: error.message });
     }
 
 });
+
+
+
+server.get('/gemini', async (req, res) => {
+    let { word } = req.query;
+    word = word.toLowerCase().trim();   
+    console.log("===> ",word)
+    try {
+        if (word.length > 20) {
+            res.send({
+                text: "Max length 10 characters"
+            });
+        }
+        const INSTRUCTION = `
+        ${word} analyze and maintain the order of syllables: onset, nucleus, coda
+          Return a json following format
+            [
+                {
+                  "index": 1,
+                  "onset": "/v/",
+                  "nucleus": "/ɜː/",
+                  "coda": null,
+                  "syllables:  "/vɜː/"
+                },
+                {
+                  "syllable_number": 2,
+                  "onset": "/ʃ/",
+                  "nucleus": "/n/",
+                  "coda": null,
+                  "syllables:  "/ʃn/"
+                }
+            ]
+
+      Output requirement:
+        Return only one JSON object — the updated version containing the completed syllableArray.
+        No additional explanations, text, or formatting are allowed outside the JSON object.
+      `;
+
+        const ai = new GoogleGenAI({ apiKey: process.env.APIKEY});
+        const response = await ai.models.generateContent({
+            model: "gemini-2.5-flash",
+            contents: INSTRUCTION,
+            // config: {
+            //     systemInstruction: INSTRUCTION,
+            // }
+        });
+
+        if (response.text) {
+            const CLEANUP_REGEX = /^\s*```json\s*|\s*```\s*$/g;
+            const jsonString = JSON.parse(response.text.replace(CLEANUP_REGEX, ''));
+
+            res.send({
+                jsonString
+            });
+        }
+
+    } catch (error) {
+        console.error("Fetch error:", error);
+        res.status(500).send({ message: error.message });
+    }
+})
 
 cron.schedule('*/10 * * * *', () => {
     console.log('Cron job running every 10 minutes');
