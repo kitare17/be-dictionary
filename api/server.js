@@ -30,7 +30,8 @@ server.use(jsonServer.rewriter({
 server.get('/oxford', async (req, res) => {
 
     let { word } = req.query;
-    word = word.toLowerCase.trim;
+    word = word.toLowerCase().trim();
+
     const URL = `https://www.oxfordlearnersdictionaries.com/definition/english/${word}_1?q=${word}`;
     // const URL= "https://www.oxfordlearnersdictionaries.com/definition/english/red_1?q=red"
     try {
@@ -113,7 +114,7 @@ server.get('/oxford', async (req, res) => {
 
 server.get('/gemini', async (req, res) => {
     let { word, indexKey } = req.query;
-    
+
     // config param logic
     const maxLengthWord = 20;
     let flagFailCount = 0;
@@ -146,26 +147,26 @@ server.get('/gemini', async (req, res) => {
       Output requirement:
         Return only one JSON object — the updated version containing the completed syllableArray.
         No additional explanations, text, or formatting are allowed outside the JSON object.
-      `; 
+      `;
 
     // input
     word = word.toLowerCase().trim();
-    indexKey = (indexKey % AI_KEY_LENGTH) 
+    indexKey = (indexKey % AI_KEY_LENGTH)
 
     // debug
     console.log("===> ", word)
     console.log("===> ", AI_KEY_LENGTH)
 
-    while (flagFailCount<maxFailCount) {
+    while (flagFailCount < maxFailCount) {
         try {
             if (word.length > maxLengthWord) {
                 res.send({
                     text: `Max length ${maxLengthWord} characters`
                 });
             }
-            const ai = new GoogleGenAI({ apiKey: AI_KEY_LIST[indexKey]});
+            const ai = new GoogleGenAI({ apiKey: AI_KEY_LIST[indexKey] });
             const response = await ai.models.generateContent({
-                model:AI_MODEL,
+                model: AI_MODEL,
                 contents: INSTRUCTION,
                 config: {
                     temperature: 0.1
@@ -175,7 +176,7 @@ server.get('/gemini', async (req, res) => {
             if (response.text) {
                 const CLEANUP_REGEX = /^\s*```json\s*|\s*```\s*$/g;
                 const jsonString = JSON.parse(response.text.replace(CLEANUP_REGEX, ''));
-                
+
                 res.send({
                     jsonString
                 });
@@ -183,9 +184,9 @@ server.get('/gemini', async (req, res) => {
             }
         } catch (error) {
             console.error("Fetch error:", error);
-             flagFailCount++;
-             indexKey = (indexKey + 1 % AI_KEY_LENGTH)
-            if(flagFailCount==maxFailCount){
+            flagFailCount++;
+            indexKey = (indexKey + 1 % AI_KEY_LENGTH)
+            if (flagFailCount == maxFailCount) {
                 res.status(500).send({ message: error.message });
             }
         }
