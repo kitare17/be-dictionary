@@ -112,16 +112,18 @@ server.get('/oxford', async (req, res) => {
 
 
 server.get('/gemini', async (req, res) => {
-    let { word } = req.query;
-    word = word.toLowerCase().trim();   
-    console.log("===> ",word)
-    try {
-        if (word.length > 20) {
-            res.send({
-                text: "Max length 10 characters"
-            });
-        }
-        const INSTRUCTION = `
+    let { word, indexKey } = req.query;
+    
+    // config param logic
+    const maxLengthWord = 20;
+    let flagFailCount = 0;
+    let maxFailCount = 4;
+
+    // AI param
+    const AI_KEY_LIST = process.env.APIKEY.split(' ');
+    const AI_KEY_LENGTH = AI_KEY_LIST.length;
+    const AI_MODEL = "gemini-2.5-flash";
+    const INSTRUCTION = `
         ${word} analyze and maintain the order of syllables: onset, nucleus, coda
           Return a json following format
             [
@@ -144,29 +146,49 @@ server.get('/gemini', async (req, res) => {
       Output requirement:
         Return only one JSON object — the updated version containing the completed syllableArray.
         No additional explanations, text, or formatting are allowed outside the JSON object.
-      `;
+      `; 
 
-        const ai = new GoogleGenAI({ apiKey: process.env.APIKEY});
-        const response = await ai.models.generateContent({
-            model: "gemini-2.5-flash",
-            contents: INSTRUCTION,
-            // config: {
-            //     systemInstruction: INSTRUCTION,
-            // }
-        });
+    // input
+    word = word.toLowerCase().trim();
+    indexKey = (indexKey % AI_KEY_LENGTH) 
 
-        if (response.text) {
-            const CLEANUP_REGEX = /^\s*```json\s*|\s*```\s*$/g;
-            const jsonString = JSON.parse(response.text.replace(CLEANUP_REGEX, ''));
+    // debug
+    console.log("===> ", word)
+    console.log("===> ", AI_KEY_LENGTH)
 
-            res.send({
-                jsonString
+    while (flagFailCount<maxFailCount) {
+        try {
+            if (word.length > maxLengthWord) {
+                res.send({
+                    text: `Max length ${maxLengthWord} characters`
+                });
+            }
+            const ai = new GoogleGenAI({ apiKey: AI_KEY_LIST[indexKey]});
+            const response = await ai.models.generateContent({
+                model:AI_MODEL,
+                contents: INSTRUCTION,
+                config: {
+                    temperature: 0.1
+                }
             });
-        }
 
-    } catch (error) {
-        console.error("Fetch error:", error);
-        res.status(500).send({ message: error.message });
+            if (response.text) {
+                const CLEANUP_REGEX = /^\s*```json\s*|\s*```\s*$/g;
+                const jsonString = JSON.parse(response.text.replace(CLEANUP_REGEX, ''));
+                
+                res.send({
+                    jsonString
+                });
+                break;
+            }
+        } catch (error) {
+            console.error("Fetch error:", error);
+             flagFailCount++;
+             indexKey = (indexKey + 1 % AI_KEY_LENGTH)
+            if(flagFailCount==maxFailCount){
+                res.status(500).send({ message: error.message });
+            }
+        }
     }
 })
 
