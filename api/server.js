@@ -34,6 +34,7 @@ server.get('/oxford', async (req, res) => {
 
     const URL = `https://www.oxfordlearnersdictionaries.com/definition/english/${word}_1?q=${word}`;
     // const URL= "https://www.oxfordlearnersdictionaries.com/definition/english/red_1?q=red"
+    console.log(URL);
     try {
         const response = await fetch(
             URL,
@@ -55,14 +56,16 @@ server.get('/oxford', async (req, res) => {
 
         // craw data from html
         const { document } = parseHTML(html);
-        const proUKList = Array.from(document.querySelectorAll('.symbols ~ .phonetics   .sound.audio_play_button.pron-uk.icon-audio ~ .phon'));
-        const proUSList = Array.from(document.querySelectorAll('.symbols ~ .phonetics   .sound.audio_play_button.pron-us.icon-audio ~ .phon'));
+        const proUKList = Array.from(document.querySelectorAll('.headword ~ .phonetics   .sound.audio_play_button.pron-uk.icon-audio ~ .phon'));
+        const proUSList = Array.from(document.querySelectorAll('.headword ~ .phonetics   .sound.audio_play_button.pron-us.icon-audio ~ .phon'));
 
         const UKAudioList = Array.from(document.querySelectorAll('span .sound.audio_play_button.pron-uk'));
         const USAudioList = Array.from(document.querySelectorAll('span .sound.audio_play_button.pron-us'));
 
         const wordLevelList = Array.from(document.querySelectorAll('.symbols a'));
-        let wordMeaningList = Array.from(document.querySelectorAll('.shcut-g span.def'));
+        let wordMeaningList = Array.from(document.querySelectorAll(".senses_multiple .def"));
+
+        console.log("==>",wordMeaningList.length)
 
         wordMeaningList = wordMeaningList.map((word) => word.textContent);
 
