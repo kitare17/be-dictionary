@@ -20,6 +20,7 @@ const router = jsonServer.router('db.json')
 
 const middlewares = jsonServer.defaults()
 
+let indexKey = 0
 server.use(middlewares)
 // Add this before server.use(router)
 server.use(jsonServer.rewriter({
@@ -116,7 +117,7 @@ server.get('/oxford', async (req, res) => {
 
 
 server.get('/gemini', async (req, res) => {
-    let { word, indexKey } = req.query;
+    let { word } = req.query;
 
     // config param logic
     const maxLengthWord = 20;
@@ -129,36 +130,78 @@ server.get('/gemini', async (req, res) => {
     const AI_MODEL = "gemini-2.5-flash";
     const INSTRUCTION = `
         ${word} analyze and maintain the order of syllables: onset, nucleus, coda
-          Return a json following format
+        
+        Your must follow the rule before get the final result 
+        ORDER OF PRIORITY OF SYLLABLE SEPARATION RULES
+            1/Short vowel contraint(SVC)
+            1.1/Apply for nucleus: /ɒ, æ, ʊ, ɪ, ɛ/ carry primary stress
+            If syllabel include short vowel is stress, nucleus will have coda 
+            1.2/Choose coda rule:
+            - Single Coda
+            - Double/Triple Coda (If valid, let the remaining consonant be the Onset of the next syllable)
+            1.3/Purpose: Keep short vowels “checked”, avoid prolongation
+            1.4/Example 
+            - /ˈkæ.tə/ → incorrect if using MOP → correct: /ˈkæt.ə/ (because /æ/ has stress → must be closed)
+            - /ˈæ.tləs/ → /æt/ closed Coda /t/
+
+            2/Stressed Open Vowel Constraint (SOVC) 
+            2.1/Apply for nucleus: Open/long vowels (e.g. /ɑː, ɜː, ɔː/) carry primary stress
+            Syllables containing open vowels have stress so there should be a Coda for the closed syllable.
+            2.2/Choose coda rule:
+            - Single Coda
+            - Double/Triple Coda (If valid, let the remaining consonant be the Onset of the next syllable)
+            2.3/ Example
+            /ˈfɑː.mə/ → /ɑː/ to carry stress → to close → /ˈfɑːm.ə/
+            /ˈɜː.rɪŋ/ → /ɜː/ to carry stress → /ˈɜːr.ɪŋ/
+
+            3/Maximal Onset Principle (MOP)
+            3.1/ Apply for nucleus: The nucleus is NOT short vowel or Short vowel but NOT with main stress
+            3.2/ Rule: Push the consonant to the next syllable's Onset as much as possible, as long as the Onset is valid in English
+            3.3/ Example
+            /ˌkæ.təˈstɹɒ.fɪk/: /æ/ is not stressed → apply MOP → /t/ pushes to onset /tə/
+            /ˌɪn.təˈnæʃ.ə.nəl/ → unstressed following consonant /ə/ → pushed to onset: ɪn.tə.næʃ.ə.nəl
+
+            4/Consonant Cluster Constraint (CCC) 
+            4.1/ Apply for nucleus: When there is a consonant string >1 after the vowel that requires Coda
+            4.2/ Rules:
+            - Choose the longest valid Coda (maximal valid coda cluster) in English.
+            - The rest of the string is the Onset of the next syllable, as long as it is valid.
+            - If it cannot be split validly → take C₁ as Coda, the rest as Onset.
+            4.3/ Example:/kəˈtæstrəfi/
+            - String after /æ/ = /str/
+            - Find maximal valid Coda cluster → valid /st/ → /tæst/
+            - Remainder = /r/ → onset syllable 2 → /rə/
+            - Result: /kəˈtæst.rə.fi/
+        Return a json following format
             [
                 {
                   "index": 1,
                   "onset": "/v/",
                   "nucleus": "/ɜː/",
                   "coda": null,
-                  "syllables:  "/vɜː/"
+                  "syllable:  "/vɜː/"
                 },
                 {
                   "syllable_number": 2,
                   "onset": "/ʃ/",
                   "nucleus": "/n/",
                   "coda": null,
-                  "syllables:  "/ʃn/"
+                  "syllable:  "/ʃn/"
                 }
-            ]
-
+            ]      
       Output requirement:
         Return only one JSON object — the updated version containing the completed syllableArray.
+        Must be Syllable = onset + nucleus + coda (check carefullly)
         No additional explanations, text, or formatting are allowed outside the JSON object.
       `;
 
     // input
     word = word.toLowerCase().trim();
+    indexKey++;
     indexKey = (indexKey % AI_KEY_LENGTH)
 
     // debug
-    console.log("===> ", word)
-    console.log("===> ", AI_KEY_LENGTH)
+    console.log("indexKey===> ", indexKey)
 
     while (flagFailCount < maxFailCount) {
         try {
@@ -172,7 +215,7 @@ server.get('/gemini', async (req, res) => {
                 model: AI_MODEL,
                 contents: INSTRUCTION,
                 config: {
-                    temperature: 0.1
+                    temperature: 0
                 }
             });
 
