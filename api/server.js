@@ -308,7 +308,7 @@ server.get('/gemini', async (req, res) => {
         } catch (error) {
             console.error(`Fetch error:(${indexKey})`, error);
             flagFailCount++;
-            indexKey = (indexKey + 1 % AI_KEY_LENGTH)
+            indexKey = ((indexKey + 1) % AI_KEY_LENGTH)
             if (flagFailCount == maxFailCount) {
                 res.status(500).send({ message: error.message });
             }
