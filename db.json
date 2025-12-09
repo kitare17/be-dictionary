@@ -113,157 +113,75 @@
   ],
   "quiz2": [
     {
-      "mainWord": "apple",
-      "ans1": "A fruit that is red or green",
-      "ans2": "A kind of car",
-      "ans3": "A type of music",
-      "ans4": "A piece of furniture",
-      "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/apple--_gb_1.mp3",
-      "indexCorrectAns": 1
-    },
-    {
-      "mainWord": "river",
-      "ans1": "A large natural stream of water",
-      "ans2": "A mountain",
-      "ans3": "A desert",
-      "ans4": "A kind of fish",
-      "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/river--_gb_1.mp3",
-      "indexCorrectAns": 1
-    },
-    {
-      "mainWord": "chair",
-      "ans1": "A kind of bird",
-      "ans2": "A piece of furniture for sitting",
-      "ans3": "A type of food",
-      "ans4": "A musical instrument",
-      "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/chair--_gb_1.mp3",
-      "indexCorrectAns": 2
-    },
-    {
-      "mainWord": "computer",
-      "ans1": "A device used for calculations and processing data",
-      "ans2": "A kind of fruit",
-      "ans3": "A book",
-      "ans4": "A car",
-      "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/computer--_gb_1.mp3",
-      "indexCorrectAns": 1
-    },
-    {
-      "mainWord": "elephant",
-      "ans1": "A large mammal with a trunk",
-      "ans2": "A small bird",
-      "ans3": "A kind of fish",
-      "ans4": "A reptile",
-      "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/elephant--_gb_1.mp3",
-      "indexCorrectAns": 1
-    },
-    {
-      "mainWord": "sun",
-      "ans1": "The star at the center of our solar system",
-      "ans2": "A planet",
-      "ans3": "A moon",
-      "ans4": "A comet",
-      "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/sun--_gb_1.mp3",
-      "indexCorrectAns": 1
-    },
-    {
-      "mainWord": "teacher",
-      "ans1": "Someone who teaches students",
-      "ans2": "Someone who drives buses",
-      "ans3": "Someone who cooks food",
-      "ans4": "Someone who paints houses",
-      "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/teacher--_gb_1.mp3",
-      "indexCorrectAns": 1
-    },
-    {
-      "mainWord": "phone",
-      "ans1": "A device for making calls",
-      "ans2": "A musical instrument",
-      "ans3": "A car",
-      "ans4": "A kind of bird",
-      "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/phone--_gb_1.mp3",
-      "indexCorrectAns": 1
-    },
-    {
-      "mainWord": "dog",
-      "ans1": "A domestic animal that barks",
-      "ans2": "A type of fish",
-      "ans3": "A kind of fruit",
-      "ans4": "A reptile",
-      "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/dog--_gb_1.mp3",
-      "indexCorrectAns": 1
-    },
-    {
-      "mainWord": "book",
-      "ans1": "A collection of written pages bound together",
-      "ans2": "A piece of furniture",
-      "ans3": "A drink",
-      "ans4": "A kind of car",
-      "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/book--_gb_1.mp3",
-      "indexCorrectAns": 1
-    }
-  ],
-  "quiz2_sample": [
-    {
       "word" :"representative",
       "syllable":"/ˌr...p.r...ˈz...n.t...t...v /",
       "nucleusArray": ["e", "ə", "ɪ", "æ", "ʌ", "ɑː", "ɒ", "e" ,"ɪ" ],
+      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/r/rep/repre/representative__gb_3.mp3",
       "key":"eɪeəɪ"
     },
     {
       "word" :"doctor",
       "syllable":"/ˈd...k.t...r /",
       "nucleusArray": ["/uː", "ə", "ɒ", "ə", "ɑː", "ɪ", "ʌ" ],
+      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/d/doc/docto/doctor__gb_2.mp3",
       "key":"ɒə"
     },
     {
       "word" :"ethnic",
       "syllable":"/ˈ...θ.n...k /",
       "nucleusArray": ["ʌ", "e", "æ", "ə", "ɪ", "uː", "ɑː"],
+      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/e/eth/ethni/ethnic__gb_2.mp3",
       "key":"eɪ"
     },
     {
       "word" :"disastrous",
       "syllable":"/d...ˈz...s.tr...s /",
       "nucleusArray": ["ɪ", "ɑː", "e", "æ", "ʌ", "ɒ", "ə" ],
+      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/d/dis/disas/disastrous__gb_3.mp3",
       "key":"ɪɑːə"
     },
     {
       "word" :"indivisibility",
       "syllable":"/ˌ...n.d...v…z....ˈb...l....t...t.../",
       "nucleusArray": ["ɪ", "ɒ", "æ", "ɪ", "ʌ", "ɪ", "ə", "ɪ", "uː", "e", "ɑː", "ɪ", "ə" ],
+      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/i/ind/indiv/indivisibility__gb_1.mp3",
       "key":"ɪɪɪəɪəɪ"
     }
   ],
-  "quiz3_sample":[
+  "quiz3":[
     {
       "word" :"risk",
       "syllable":"/rɪ…/",
       "nucleusArray": ["k", "p", "t", "m", "f", "l", "s", "c"],
+      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/r/ris/risk_/risk__gb_2.mp3",
       "key":"sk"
     },
     {
       "word" :"jinx",
       "syllable":"/dʒɪ…/",
       "nucleusArray": ["ŋ", "s", "t", "p", "ʃ", "k", "z", "n", "ng", "x", "r", "tʃ"],
+      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/j/jin/jinx_/jinx__gb_1.mp3",
       "key":"ŋks"
     },
     {
       "word" :"tempt",
       "syllable":"/te…/",
       "nucleusArray": ["m", "q", "k", "l", "n", "p", "b", "tʃ"],
+      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/t/tem/tempt/tempt__gb_1.mp3",
       "key":"mpt"
     },
     {
       "word" :"tenth",
       "syllable":"/te…/",
       "nucleusArray": ["θ", "s", "t", "m", "n", "k", "v", "tʃ"],
+      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/t/ten/tenth/tenth__gb_1.mp3",
       "key":"nθ"
     },
     {
       "word" :"help",
       "syllable":"/he…/",
       "nucleusArray": ["l", "s", "t", "m", "p", "r", "k", "tʃ"],
+      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/h/hel/help_/help__gb_1.mp3",
       "key":"lp"
     }
   ]
