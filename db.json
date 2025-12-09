@@ -202,5 +202,70 @@
       "audioLink": "https://ssl.gstatic.com/dictionary/static/sounds/20200429/book--_gb_1.mp3",
       "indexCorrectAns": 1
     }
+  ],
+  "quiz2_sample": [
+    {
+      "word" :"representative",
+      "syllable":"/ˌr...p.r...ˈz...n.t...t...v /",
+      "nucleusArray": ["e", "ə", "ɪ", "æ", "ʌ", "ɑː", "ɒ", "e" ,"ɪ" ],
+      "key":"eɪeəɪ"
+    },
+    {
+      "word" :"doctor",
+      "syllable":"/ˈd...k.t...r /",
+      "nucleusArray": ["/uː", "ə", "ɒ", "ə", "ɑː", "ɪ", "ʌ" ],
+      "key":"ɒə"
+    },
+    {
+      "word" :"ethnic",
+      "syllable":"/ˈ...θ.n...k /",
+      "nucleusArray": ["ʌ", "e", "æ", "ə", "ɪ", "uː", "ɑː"],
+      "key":"eɪ"
+    },
+    {
+      "word" :"disastrous",
+      "syllable":"/d...ˈz...s.tr...s /",
+      "nucleusArray": ["ɪ", "ɑː", "e", "æ", "ʌ", "ɒ", "ə" ],
+      "key":"ɪɑːə"
+    },
+    {
+      "word" :"indivisibility",
+      "syllable":"/ˌ...n.d...v…z....ˈb...l....t...t.../",
+      "nucleusArray": ["ɪ", "ɒ", "æ", "ɪ", "ʌ", "ɪ", "ə", "ɪ", "uː", "e", "ɑː", "ɪ", "ə" ],
+      "key":"ɪɪɪəɪəɪ"
+    }
+  ],
+  "quiz3_sample":[
+    {
+      "word" :"risk",
+      "syllable":"/rɪ…/",
+      "nucleusArray": ["k", "p", "t", "m", "f", "l", "s", "c"],
+      "key":"sk"
+    },
+    {
+      "word" :"jinx",
+      "syllable":"/dʒɪ…/",
+      "nucleusArray": ["ŋ", "s", "t", "p", "ʃ", "k", "z", "n", "ng", "x", "r", "tʃ"],
+      "key":"ŋks"
+    },
+    {
+      "word" :"tempt",
+      "syllable":"/te…/",
+      "nucleusArray": ["m", "q", "k", "l", "n", "p", "b", "tʃ"],
+      "key":"mpt"
+    },
+    {
+      "word" :"tenth",
+      "syllable":"/te…/",
+      "nucleusArray": ["θ", "s", "t", "m", "n", "k", "v", "tʃ"],
+      "key":"nθ"
+    },
+    {
+      "word" :"help",
+      "syllable":"/he…/",
+      "nucleusArray": ["l", "s", "t", "m", "p", "r", "k", "tʃ"],
+      "key":"lp"
+    }
   ]
+
 }
