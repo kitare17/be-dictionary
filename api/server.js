@@ -23,6 +23,33 @@ const middlewares = jsonServer.defaults()
 let indexKey = 0;
 const maxLengthWord = 20;
 
+const MAX_LIMIT_GEMINI = process.env.MAX_LIMIT_GEMINI;
+
+const KEY_TRIAL = (process.env.KEY_TRIAL).split(" ");
+const KEY_ULTIMATE= (process.env.KEY_ULTIMATE);
+
+let KEY_TRIAL_COUNT = KEY_TRIAL.map((value)=>{
+  return {
+    key:value,
+    count:0
+  }
+})
+
+function checkExistKey(key){
+    if(KEY_ULTIMATE==key){
+        console.log("Ultimate key")
+        return true;
+    }else if(KEY_TRIAL.includes(key)){
+        let keyIndex =  KEY_TRIAL_COUNT.findIndex(key_trial=>{return key===key_trial.key});
+        console.log("Key is exist ",KEY_TRIAL_COUNT[keyIndex])
+        if(keyIndex>=0 && KEY_TRIAL_COUNT[keyIndex].count < MAX_LIMIT_GEMINI){
+            KEY_TRIAL_COUNT[keyIndex].count++
+            return true;
+        }
+    }
+    return false;
+}
+
 server.use(middlewares)
 // Add this before server.use(router)
 server.use(jsonServer.rewriter({
@@ -31,7 +58,7 @@ server.use(jsonServer.rewriter({
 }))
 
 server.get('/oxford', async (req, res) => {
-
+   
     let { word } = req.query;
     word = word.toLowerCase().trim();
 
@@ -171,6 +198,13 @@ server.get('/mistake', async (req, res) => {
 
 server.get('/gemini', async (req, res) => {
     let { word } = req.query;
+    let {key} = req.headers;
+
+    //check valid key
+    if(!checkExistKey(key)){
+        res.status(500).send({ message: "Invalid key or reach max limit" });
+        return;
+    }
 
     // config param logic
     let flagFailCount = 0;
@@ -259,7 +293,7 @@ server.get('/gemini', async (req, res) => {
                   "syllable:  "/vɜː/"
                 },
                 {
-                  "syllable_number": 2,
+                  "index": 2,
                   "onset": "/ʃ/",
                   "nucleus": "/n/",
                   "coda": null,
@@ -310,7 +344,7 @@ server.get('/gemini', async (req, res) => {
             flagFailCount++;
             indexKey = (indexKey + 1 % AI_KEY_LENGTH)
             if (flagFailCount == maxFailCount) {
-                res.status(500).send({ message: error.message });
+                res.status(500).send({ message: "Overload...." });
             }
         }
     }
@@ -322,7 +356,7 @@ cron.schedule('*/10 * * * *', () => {
     // Gửi một request bất kỳ tới server (có thể thay đổi endpoint)
     axios.get('https://be-dictionary.onrender.com/quiz2')
         .then(response => {
-            console.log('Data received:', response.data);
+            // console.log('Data received:', response.data);
         })
         .catch(error => {
             console.error('Error during axios request:', error);
