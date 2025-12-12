@@ -202,7 +202,7 @@ server.get('/gemini', async (req, res) => {
 
     //check valid key
     if(!checkExistKey(key)){
-        res.status(500).send({ message: "Invalid key or reach max limit" });
+        res.status(500).send({ message: "Invalid key or reach max limit", errorCode:"KEY_ERROR" });
         return;
     }
 
@@ -344,7 +344,7 @@ server.get('/gemini', async (req, res) => {
             flagFailCount++;
             indexKey = ((indexKey + 1) % AI_KEY_LENGTH)
             if (flagFailCount == maxFailCount) {
-                res.status(500).send({ message: "Overload...." });
+                res.status(500).send({ message: "Overload...." , errorCode:"GEMINI_ERROR"});
             }
         }
     }
