@@ -128,21 +128,21 @@
     },
     {
       "word" :"ethnic",
-      "syllable":"/ˈ...θ.n...k /",
+      "syllable":"/ˈ...θ.n...k/",
       "nucleusArray": ["ʌ", "e", "æ", "ə", "ɪ", "uː", "ɑː"],
       "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/e/eth/ethni/ethnic__gb_2.mp3",
       "key":"eɪ"
     },
     {
       "word" :"disastrous",
-      "syllable":"/d...ˈz...s.tr...s /",
+      "syllable":"/d...ˈz...s.tr...s/",
       "nucleusArray": ["ɪ", "ɑː", "e", "æ", "ʌ", "ɒ", "ə" ],
       "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/d/dis/disas/disastrous__gb_3.mp3",
       "key":"ɪɑːə"
     },
     {
       "word" :"indivisibility",
-      "syllable":"/ˌ...n.d...v…z....ˈb...l....t...t.../",
+      "syllable":"/ˌ...n.d...v...z...ˈb...l...t.../",
       "nucleusArray": ["ɪ", "ɒ", "æ", "ɪ", "ʌ", "ɪ", "ə", "ɪ", "uː", "e", "ɑː", "ɪ", "ə" ],
       "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/i/ind/indiv/indivisibility__gb_1.mp3",
       "key":"ɪɪɪəɪəɪ"
@@ -151,35 +151,35 @@
   "quiz3":[
     {
       "word" :"risk",
-      "syllable":"/rɪ…/",
+      "syllable":"/rɪ.../",
       "nucleusArray": ["k", "p", "t", "m", "f", "l", "s", "c"],
       "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/r/ris/risk_/risk__gb_2.mp3",
       "key":"sk"
     },
     {
       "word" :"jinx",
-      "syllable":"/dʒɪ…/",
+      "syllable":"/dʒɪ.../",
       "nucleusArray": ["ŋ", "s", "t", "p", "ʃ", "k", "z", "n", "ng", "x", "r", "tʃ"],
       "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/j/jin/jinx_/jinx__gb_1.mp3",
       "key":"ŋks"
     },
     {
       "word" :"tempt",
-      "syllable":"/te…/",
+      "syllable":"/te.../",
       "nucleusArray": ["m", "q", "k", "l", "n", "p", "b", "tʃ"],
       "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/t/tem/tempt/tempt__gb_1.mp3",
       "key":"mpt"
     },
     {
       "word" :"tenth",
-      "syllable":"/te…/",
+      "syllable":"/te.../",
       "nucleusArray": ["θ", "s", "t", "m", "n", "k", "v", "tʃ"],
       "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/t/ten/tenth/tenth__gb_1.mp3",
       "key":"nθ"
     },
     {
       "word" :"help",
-      "syllable":"/he…/",
+      "syllable":"/he.../",
       "nucleusArray": ["l", "s", "t", "m", "p", "r", "k", "tʃ"],
       "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/h/hel/help_/help__gb_1.mp3",
       "key":"lp"
