@@ -219,53 +219,60 @@ server.get('/gemini', async (req, res) => {
         
         Your must follow the rule before get the final result 
         ORDER OF PRIORITY OF SYLLABLE SEPARATION RULES
-        1/ The strongest rule - Short vowel constaint
-        1.1/ Only applies to: Short vowels /ɒ, æ, ʊ, ɪ, ɛ/ carry primary stress
+        1/Special cases
+        1.1/ AFFRICATES - Never split
+        They are always a single consonant, not a group of two sounds: /tʃ/, /dʒ/
+        1.2/ DIPHTHONGS - Never split into two vowels
+        - a single nucleus, not two syllables: /eɪ/, /aɪ/, /ɔɪ/, /aʊ/, /əʊ/, /oʊ/, /ɪə/, /eə/, /ʊə/.
+        1.3/ LONG VOWELS, TENSE VOWELS — DO NOT SPLIT
+
+        2/ The strongest rule - Short vowel constaint
+        2.1/ Only applies to: Short vowels /ɒ, æ, ʊ, ɪ, ɛ/ carry primary stress
             Syllable containing short vowel stressed → must be closed (CVC)
-        1.2/ How to choose a coda: Select the maximum valid coda (single, double, triple). The consonant remainder (if any) is pushed to the onset of the next syllable, if valid.     
-        1.3/ Purpose: Keep short vowels “checked”, avoid prolongation
-        1.4/ Example
+        2.2/ How to choose a coda: Select the maximum valid coda (single, double, triple). The consonant remainder (if any) is pushed to the onset of the next syllable, if valid.     
+        2.3/ Purpose: Keep short vowels “checked”, avoid prolongation
+        2.4/ Example
             /ˈkæ.tə/ → /ˈkæt.ə/ (because /æ/ is stressed → must close)
             /ˈæ.tləs/ → /æt.ləs/ (coda /t/)
 
-        2/ Additional Rule – Stressed Open Vowel Constraint (SOVC)	
-        2.1/ Only applies to: Open/long vowels (open vowels /ɑː, ɜː, ɔː/) with main stress
+        3/ Additional Rule – Stressed Open Vowel Constraint (SOVC)	
+        3.1/ Only applies to: Open/long vowels (open vowels /ɑː, ɜː, ɔː/) with main stress
             Syllable containing stressed open vowel → should close syllable
-        2.2/ How to choose coda: Choose the maximum valid coda (single, double, triple). Consonant residue pushes to the onset of the next syllable, if valid
-        2.3/ Example:
+        3.2/ How to choose coda: Choose the maximum valid coda (single, double, triple). Consonant residue pushes to the onset of the next syllable, if valid
+        3.3/ Example:
             /ˈfɑː.mə/ → /ˈfɑːm.ə/ (coda /m/ do SOVC)
             /ˈɜː.rɪŋ/ → /ˈɜːr.ɪŋ/ (coda /r/)
 
-        3/ Maximal Onset Principle (MOP) 
-        3.1/ Applicable when: Vowel is not short vowel or short vowel but not primary stressed
-            Push the consonant to the onset of the next syllable as much as possible, provided the onset is valid in English
-        3.2/ Example:
+        4/ Maximal Onset Principle (MOP) 
+        4.1/ Applicable when: Vowel is not short vowel or short vowel but not primary stressed
+           Push the consonant to the onset of the next syllable as much as possible, provided the onset is valid in English
+        4.2/ Example:
             ˌkæ.təˈstrɒ.fɪk/ → /ˌkæt.əˈstrɒ.fɪk/ (short vowel /æ/ is not stressed → apply MOP to the next consonant)
             /ˌɪn.təˈnæʃ.ə.nəl/ → /ɪn.tə.næʃ.ə.nəl/ (non-stressed consonant → push to onset)
 
-        4/ General notes when dividing
-        4.1/ If the coda is already selected but there is a consonant → push to the next syllable onset, if valid
-        4.2/ Unstressed syllables → MOP applies normally
-        4.3/ /r/ at the end of syllable 2 → depends on American or British accent
+        5/ General notes when dividing
+        5.1/ If the coda is already selected but there is a consonant → push to the next syllable onset, if valid
+        5.2/ Unstressed syllables → MOP applies normally
+        5.3/ /r/ at the end of syllable 2 → depends on American or British accent
 
-        5/ Special notes on /r/
-        5.1/ British English (RP, non-rhotic)
-        5.1.1/ RP transcription still writes /r/ when written as /kɑː(r)/ to reflect spelling and linking /r/.
-        5.1.2/ In the CODA table and O–N–C tree diagram, /r/ is not considered a coda if:
+        6/ Special notes on /r/
+        6.1/ British English (RP, non-rhotic)
+        6.1.1/ RP transcription still writes /r/ when written as /kɑː(r)/ to reflect spelling and linking /r/.
+        6.1.2/ In the CODA table and O–N–C tree diagram, /r/ is not considered a coda if:
             - It does not follow a vowel in the same syllable (non-rhotic)
             - The syllable ends in an open vowel /ɑː, ɜː, ɔː/
-        5.1.3/ Example:
+        6.1.3/ Example:
             farmer RP /ˈfɑːmə(r)/ Syllable 1: Onset = /f/, Nucleus = /ɑː/, Coda = /m/; Syllable 2: Onset = Ø, Nucleus = /ə/, /r/ is not a coda
 
             car RP /kɑː(r)/ Onset = /k/, Nucleus = /ɑː/, Coda = Ø; /r/ appears in transcription but is not a coda
 
-        5.2/ American accent (AmE, rhotic)
-        5.2.1/
+        6.2/ American accent (AmE, rhotic)
+        6.2.1/
             /r/ is always pronounced at the end of a syllable, and is considered a coda when it is at the end of a syllable. It not only appears in spelling, but also participates directly in the O–N–C syllable structure.
             Example
                 farmer	AmE	/ˈfɑːrmər/	Âm tiết 1: Onset = /f/, Nucleus = /ɑː/, Coda = /rm/; Âm tiết 2: Onset = Ø, Nucleus = /ə/, Coda = r
                 car	AmE	/kɑːr/	Onset = /k/, Nucleus = /ɑː/, Coda = /r/
-        5.2.2/ 
+        6.2.2/ 
             RP transcription still records /r/ when written as /kɑː(r)/ to reflect spelling and linking /r/.
             In the CODA table and O–N–C tree diagram, /r/ is not considered a coda if:
                 -It does not follow a vowel in the same syllable (non-rhotic)
@@ -273,16 +280,18 @@ server.get('/gemini', async (req, res) => {
             Example
                 farmer RP /ˈfɑːmə(r)/ /ˈfɑːm.ə/ → Syllable 1: Onset = /f/, Nucleus = /ɑː/, Coda = /m/; Syllable 2: Onset = Ø, Nucleus = /ə/, /r/ is not a coda
                 car RP /kɑː(r)/ Onset = /k/, Nucleus = /ɑː/, Coda = Ø; /r/ appears in the transcription but is not a coda
-        6/ Stressed Diphthong Rule (SDR)
-        6.1/ Common diphthongs:
+        7/ Stressed Diphthong Rule (SDR)
+        7.1/ Common diphthongs:
         /aɪ, eɪ, ɔɪ, aʊ, oʊ, ɪə, eə, ʊə/
         Diphthong is not required to close the syllable, not subject to SVC or SOVC → MOP predominance.
         Result: The consonant after the diphthong is pushed to onset, unless the onset is invalid.
-        6.2/ Example
+        7.2/ Example
         /ˈvaɪ.tə.mɪn/
         -/aɪ/ carries stress but does not need a coda
         -/t/ pushes to onset: /ˈvaɪ.tə/
         /ˈseɪ.və/ → /seɪ.və/ (does not need a coda)
+        
+        Also a single nucleus: /iː/ /uː/ /ɑː/ /ɔː/ /ɜː/ (The “ː” mark is not a separate sound, so it should not be split.)
         Return a json following format
             [
                 {
