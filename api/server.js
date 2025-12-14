@@ -21,6 +21,7 @@ const router = jsonServer.router('db.json')
 const middlewares = jsonServer.defaults()
 
 let indexKey = 0;
+let indexErrorVnKey=0;
 const maxLengthWord = 20;
 
 const MAX_LIMIT_GEMINI = process.env.MAX_LIMIT_GEMINI;
@@ -147,8 +148,20 @@ server.get('/oxford', async (req, res) => {
 server.get('/mistake', async (req, res) => {
     let { word } = req.query;
     word = word.toLowerCase().trim();
-    
-    const AI_MODEL = "gemini-2.5-flash";
+
+    //check valid key
+    let {key} = req.headers;
+    if(!checkExistKey(key)){
+        res.status(500).send({ message: "Invalid key or reach max limit", errorCode:"KEY_ERROR" });
+        return;
+    }
+
+    const AI_KEY_LIST = process.env.APIKEY_MISTAKE.split(' ');
+    const AI_KEY_LENGTH = AI_KEY_LIST.length;
+    indexErrorVnKey++;
+    indexErrorVnKey = (indexErrorVnKey % AI_KEY_LENGTH)
+
+    const AI_MODEL = "gemini-2.5-flash-lite";
 
     try {
         if (word.length > maxLengthWord) {
@@ -156,6 +169,7 @@ server.get('/mistake', async (req, res) => {
                 text: `Max length ${maxLengthWord} characters`
             });
         }
+        console.log('Index common vn=>',indexErrorVnKey);
 
         const INSTRUCTION = `
             Analyze 3 common pronunciation or usage errors specific to Vietnamese native speakers when using this word:  ${word}
@@ -170,7 +184,7 @@ server.get('/mistake', async (req, res) => {
                 Return only one JSON object
                 The property value are written in Vietnamese.
         `
-        const ai = new GoogleGenAI({ apiKey: process.env.APIKEY_MISTAKE });
+        const ai = new GoogleGenAI({ apiKey: AI_KEY_LIST[indexErrorVnKey] });
         const response = await ai.models.generateContent({
             model: AI_MODEL,
             contents: INSTRUCTION,
@@ -189,7 +203,7 @@ server.get('/mistake', async (req, res) => {
         }
 
     } catch (error) {
-        console.error("Fetch error:", error);
+        console.error(`Fetch error(VN-${indexErrorVnKey}):`, error);
         res.status(500).send({ message: error.message });
     }
 }
@@ -198,9 +212,9 @@ server.get('/mistake', async (req, res) => {
 
 server.get('/gemini', async (req, res) => {
     let { word } = req.query;
-    let {key} = req.headers;
-
+    
     //check valid key
+    let {key} = req.headers;
     if(!checkExistKey(key)){
         res.status(500).send({ message: "Invalid key or reach max limit", errorCode:"KEY_ERROR" });
         return;
