@@ -234,7 +234,7 @@ server.get('/gemini', async (req, res) => {
         Your must follow the rule before get the final result 
         ORDER OF PRIORITY OF SYLLABLE SEPARATION RULES
         1/ The strongest rule - Short vowel constaint
-        1.1/ Only applies to: Short vowels /ɒ, æ, ʊ, ɪ, ɛ/ carry primary stress
+        1.1/ Only applies to: Short vowels /ɒ, æ, ʊ, ɪ, ɛ, e/ carry primary stress
             Syllable containing short vowel stressed → must be closed (CVC)
         1.2/ How to choose a coda: Select the maximum valid coda (single, double, triple). The consonant remainder (if any) is pushed to the onset of the next syllable, if valid.     
         1.3/ Purpose: Keep short vowels “checked”, avoid prolongation
