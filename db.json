@@ -2,7 +2,7 @@
   "quiz1": [
     {
       "mainWord": "Listen and Choose the right single onset for ",
-      "syllable":"...AT /...æt/",
+      "syllable":"/...æt/",
       "ans1": "A. c /k/",
       "ans2": "B. c /c/",
       "ans3": "C. b /b/",
@@ -13,7 +13,7 @@
     },
     {
       "mainWord": "Listen and Choose the right single onset for ",
-      "syllable":"...OG /...ɒɡ/",
+      "syllable":"/...ɒɡ/",
       "ans1": "A. p /p/",
       "ans2": "B. g /g/",
       "ans3": "C. f /f/",
@@ -24,7 +24,7 @@
     },
     {
       "mainWord": "Listen and Choose the right single onset for ",
-      "syllable":"...EN /...en/",
+      "syllable":"/...en/",
       "ans1": "A. b /b/",
       "ans2": "B. p /p/",
       "ans3": "C. ʃ / ʃ/",
@@ -35,7 +35,7 @@
     },
     {
       "mainWord": "Listen and Choose the right single onset for ",
-      "syllable":"...UN /...ʌn/",
+      "syllable":"/...ʌn/",
       "ans1": "A. t /t/",
       "ans2": "B. f /f/",
       "ans3": "C. s /s/",
@@ -46,7 +46,7 @@
     },
     {
       "mainWord": "Listen and Choose the right double onset for ",
-      "syllable":"...OG /...ɒɡ/",
+      "syllable":"/...ɒɡ/",
       "ans1": "A. pl /pl/",
       "ans2": "B. bl /bl/",
       "ans3": "C. fr /fr/",
@@ -57,7 +57,7 @@
     },
     {
       "mainWord": "Listen and Choose the right double onset for ",
-      "syllable":"...ED /...ed/",
+      "syllable":"/...ed/",
       "ans1": "A. sl /sl/",
       "ans2": "B. bl /bl/",
       "ans3": "C. pl /pl/",
@@ -68,7 +68,7 @@
     },
     {
       "mainWord": "Listen and Choose the right double onset for ",
-      "syllable":"...AP /...æp/",
+      "syllable":"/...æp/",
       "ans1": "A. sn /sn/",
       "ans2": "B. gr /gr/",
       "ans3": "C. sm /sm/",
@@ -79,7 +79,7 @@
     },
     {
       "mainWord": "Listen and Choose the right triple onset for ",
-      "syllable":"...AIN /...eɪn/",
+      "syllable":"/...eɪn/",
       "ans1": "A. spr /spr",
       "ans2": "B. str /str/",
       "ans3": "C. /spl /spl/",
@@ -90,7 +90,7 @@
     },
     {
       "mainWord": "Listen and Choose the right triple onset for ",
-      "syllable":"...ING /...ɪŋ/",
+      "syllable":"/...ɪŋ/",
       "ans1": "A. scr /skr/",
       "ans2": "B. str /str/",
       "ans3": "C. spr /spr/",
@@ -101,7 +101,7 @@
     },
     {
       "mainWord": "Listen and Choose the right triple onset for ",
-      "syllable":"...EET /...iːt/",
+      "syllable":"/...iːt/",
       "ans1": "A. str /str/",
       "ans2": "B. spl /spl/",
       "ans3": "C. sch /stʃ/",
