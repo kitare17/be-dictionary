@@ -150,40 +150,95 @@
   ],
   "quiz3":[
     {
-      "word" :"risk",
-      "syllable":"/rɪ.../",
-      "nucleusArray": ["k", "p", "t", "m", "f", "l", "s", "c"],
-      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/r/ris/risk_/risk__gb_2.mp3",
-      "key":"sk"
+      "word" :"judge",
+      "syllable":"/dʒʌ__/",
+      "syllable_final":"/dʒʌdʒ/",
+      "nucleusArray": ["f", "ge", "θ", "tr", "z", "ʃ", "dʒ", "ʒ"],
+      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/j/jud/judge/judge__gb_2.mp3",
+      "key":"dʒ",
+      "word_mean":[ { "type": "noun (n)", "meaning": "thẩm phán" },{ "type": "verb (v)", "meaning": "xét xử, đánh giá" }]
     },
     {
-      "word" :"jinx",
-      "syllable":"/dʒɪ.../",
-      "nucleusArray": ["ŋ", "s", "t", "p", "ʃ", "k", "z", "n", "ng", "x", "r", "tʃ"],
-      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/j/jin/jinx_/jinx__gb_1.mp3",
-      "key":"ŋks"
+      "word" :"laugh",
+      "syllable":"/læ__/",
+      "syllable_final":"/læf/",
+      "nucleusArray": ["ph", "b", "t", "d", "k", "ɡ", "f", "gh"],
+      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/l/lau/laugh/laugh__gb_1.mp3",
+      "key":"f",
+      "word_mean":[{"type":"verb (v)","meaning":"cười"},{"type":"noun (n)","meaning":"tiếng cười"}]
+    },
+   {
+      "word":"desk",
+      "syllable":"/de__ __/",
+      "syllable_final":"/desk/",
+      "nucleusArray":["x","s","c","ŋ","z","ʃ","ʒ","h","k"],
+      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/d/des/desk_/desk__gb_1.mp3",
+      "key":"sk",
+      "word_mean":[{"type":"noun (n)","meaning":"bàn làm việc, bàn học"}]
     },
     {
-      "word" :"tempt",
-      "syllable":"/te.../",
-      "nucleusArray": ["m", "q", "k", "l", "n", "p", "b", "tʃ"],
+      "word":"fifth",
+      "syllable":"/fɪ__ __/",
+      "syllable_final":"/fɪfθ/",
+      "nucleusArray":["f","p","z","ʃ","ʒ","h","k","θ"],
+      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/f/fif/fifth/fifth__gb_1.mp3",
+      "key":"fθ",
+      "word_mean":[{"type":"ordinal number","meaning":"thứ năm; một phần năm"}]
+    },
+    {
+      "word":"length",
+      "syllable":"/le__ __ __/",
+      "syllable_final":"/leŋkθ/",
+      "nucleusArray":["p","ŋ","z","ʃ","ʒ","h","k","f","θ"],
+      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/l/len/lengt/length__gb_2.mp3",
+      "key":"ŋkθ",
+      "word_mean":[{"type":"noun (n)","meaning":"chiều dài, độ dài"}]
+    },
+    {
+      "word":"ask",
+      "syllable":"/æ__ __/",
+      "syllable_final":"/æsk/",
+      "nucleusArray":["f","x","s","θ","tr","c","ʃ","dʒ","ʒ","k"],
+      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/a/ask/ask__/ask__gb_1.mp3",
+      "key":"sk",
+      "word_mean":[{"type":"verb (v)","meaning":"hỏi, yêu cầu"}]
+    },
+    {
+      "word":"prompt",
+      "syllable":"/prɒ__ __ __/",
+      "syllable_final":"/prɑmpt/",
+      "nucleusArray":["m","f","ŋ","s","b","c","p","dʒ","ʒ","t"],
+      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/p/pro/promp/prompt__gb_1.mp3",
+      "key":"mpt",
+      "word_mean":[{"type":"adjective (adj)","meaning":"nhanh chóng, đúng giờ"},{"type":"verb (v)","meaning":"thúc đẩy"},{"type":"noun (n)","meaning":"lời nhắc, yêu cầu"}]
+    },
+    {
+      "word":"milk",
+      "syllable":"/mɪ__ __/",
+      "syllable_final":"/mɪlk/",
+      "nucleusArray":["f","u","l","c","ʃ","dʒ","k"],
+      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/m/mil/milk_/milk__gb_1.mp3",
+      "key":"lk",
+      "word_mean":[{"type":"noun (n)","meaning":"sữa"},{"type":"verb (v)","meaning":"vắt sữa"}]
+    },
+    {
+      "word":"tempt",
+      "syllable":"/te__ __ __/",
+      "syllable_final":"/tɛmpt/",
+      "nucleusArray":["k","m","f","x","n","θ","p","ŋ","ʃ","dʒ","ʒ","t"],
       "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/t/tem/tempt/tempt__gb_1.mp3",
-      "key":"mpt"
+      "key":"mpt",
+      "word_mean":[{"type":"verb (v)","meaning":"cám dỗ, hấp dẫn ai làm gì"}]
     },
-    {
-      "word" :"tenth",
-      "syllable":"/te.../",
-      "nucleusArray": ["θ", "s", "t", "m", "n", "k", "v", "tʃ"],
-      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/t/ten/tenth/tenth__gb_1.mp3",
-      "key":"nθ"
-    },
-    {
-      "word" :"help",
-      "syllable":"/he.../",
-      "nucleusArray": ["l", "s", "t", "m", "p", "r", "k", "tʃ"],
-      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/h/hel/help_/help__gb_1.mp3",
-      "key":"lp"
-    }
+   {
+    "word":"twelfth",
+    "syllable":"/twe__ __ __/",
+    "syllable_final":"/twelfθ/",
+    "nucleusArray":["l","ŋ","s","m","f","c","p","dʒ","ʒ","t","θ"],
+    "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/t/twe/twelf/twelfth__gb_1.mp3",
+    "key":"lfθ",
+    "word_mean":[{"type":"ordinal number","meaning":"thứ mười hai; một phần mười hai"}]
+  }
   ]
 
 }
