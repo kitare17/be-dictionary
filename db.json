@@ -114,38 +114,48 @@
   "quiz2": [
     {
       "word" :"representative",
-      "syllable":"/ˌr...p.r...ˈz...n.t...t...v /",
-      "nucleusArray": ["e", "ə", "ɪ", "æ", "ʌ", "ɑː", "ɒ", "e" ,"ɪ" ],
+      "syllable":"/ˌr__.pr__ˈz__n.t__.t__v/",
+      "syllable_final":"/ˌre.prɪ.ˈzen.tə.tɪv/",
+      "nucleusArray": ["e", "iː", "ɪ", "uː", "ɑː", "e", "ɜː", "ə", "iː", "ɪ"],
       "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/r/rep/repre/representative__gb_3.mp3",
-      "key":"eɪeəɪ"
+      "key":"eɪeəɪ",
+      "word_mean":[ { "type": "noun (n)", "meaning": "người đại diện, đại biểu" },{ "type": "adjective (adj)", "meaning": "đại diện, tiêu biểu, đặc trưng" }]
     },
     {
-      "word" :"doctor",
-      "syllable":"/ˈd...k.t...r /",
-      "nucleusArray": ["/uː", "ə", "ɒ", "ə", "ɑː", "ɪ", "ʌ" ],
+      "word": "doctor",
+      "syllable": "/ˈd__.t__(r)/",
+      "syllable_final": "/ˈdɒk.tə(r)/",
+      "nucleusArray": ["ɔː", "ʌ", "ɒ", "uː", "e", "ə", "æ", "ɜː"],
       "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/d/doc/docto/doctor__gb_2.mp3",
-      "key":"ɒə"
+      "key": "ɒə",
+      "word_mean": [{ "type": "noun (n)", "meaning": "bác sĩ; tiến sĩ" }]
     },
     {
-      "word" :"ethnic",
-      "syllable":"/ˈ...θ.n...k/",
-      "nucleusArray": ["ʌ", "e", "æ", "ə", "ɪ", "uː", "ɑː"],
+      "word": "ethnic",
+      "syllable": "/ˈ__θ.n__k/",
+      "syllable_final": "/ˈeθ.nɪk/",
+      "nucleusArray": ["ɔː", "e", "ɒ", "uː", "iː", "ə", "æ", "ɪ"],
       "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/e/eth/ethni/ethnic__gb_2.mp3",
-      "key":"eɪ"
+      "key": "eɪ",
+      "word_mean": [{ "type": "adjective (adj)", "meaning": "thuộc dân tộc, thuộc sắc tộc" }]
     },
     {
-      "word" :"disastrous",
-      "syllable":"/d...ˈz...s.tr...s/",
-      "nucleusArray": ["ɪ", "ɑː", "e", "æ", "ʌ", "ɒ", "ə" ],
+      "word": "disastrous",
+      "syllable": "/d__.ˈz__s.tr__s/",
+      "syllable_final": "/dɪ.ˈzæs.trəs/",
+      "nucleusArray": ["iː", "e", "ɒ", "ɜː", "iː", "ə", "æ", "ɪ"],
       "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/d/dis/disas/disastrous__gb_3.mp3",
-      "key":"ɪɑːə"
+      "key": "ɪæə",
+      "word_mean": [{ "type": "adjective (adj)", "meaning": "thảm họa, tai hại, gây hậu quả nghiêm trọng" }]
     },
     {
-      "word" :"indivisibility",
-      "syllable":"/ˌ...n.d...v...z...ˈb...l...t.../",
-      "nucleusArray": ["ɪ", "ɒ", "æ", "ɪ", "ʌ", "ɪ", "ə", "ɪ", "uː", "e", "ɑː", "ɪ", "ə" ],
+      "word": "indivisibility",
+      "syllable": "/ˌ__n.d__ˌv__z__ˈb__l.__t__/",
+      "syllable_final": "/ˌɪn.dɪˌvɪ.zə.ˈbɪl.ə.ti/",
+      "nucleusArray": ["ɪ", "ɔː", "ɪ", "ə", "iː", "ɪ", "ə", "ɪ", "ɜː", "ɪ", "iː"],
       "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/i/ind/indiv/indivisibility__gb_1.mp3",
-      "key":"ɪɪɪəɪəɪ"
+      "key": "ɪɪɪəɪəɪ",
+      "word_mean": [{ "type": "noun (n)", "meaning": "tính không thể chia tách, tính không thể phân chia" }]
     }
   ],
   "quiz3":[
