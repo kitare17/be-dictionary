@@ -3,10 +3,10 @@
     {
       "mainWord": "Listen and Choose the right single onset for ",
       "syllable":"/...æt/",
-      "ans1": "A. c /k/",
-      "ans2": "B. c /c/",
-      "ans3": "C. b /b/",
-      "ans4": "D. f /f/",
+      "ans1": "A. /k/",
+      "ans2": "B. /c/",
+      "ans3": "C. /b/",
+      "ans4": "D. /f/",
       "audioLink":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/c/cat/cat__/cat__gb_2.mp3" ,
       "indexCorrectAns": 1,
       "type":"singleOnset"
@@ -14,10 +14,10 @@
     {
       "mainWord": "Listen and Choose the right single onset for ",
       "syllable":"/...ɒɡ/",
-      "ans1": "A. p /p/",
-      "ans2": "B. g /g/",
-      "ans3": "C. f /f/",
-      "ans4": "D. d /d/ ",
+      "ans1": "A. /p/",
+      "ans2": "B. /g/",
+      "ans3": "C. /f/",
+      "ans4": "D. /d/ ",
       "audioLink": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/d/dog/dog__/dog__gb_2.mp3",
       "indexCorrectAns": 4,
       "type":"singleOnset"
@@ -25,10 +25,10 @@
     {
       "mainWord": "Listen and Choose the right single onset for ",
       "syllable":"/...en/",
-      "ans1": "A. b /b/",
-      "ans2": "B. p /p/",
-      "ans3": "C. ʃ / ʃ/",
-      "ans4": "D. h /h/",
+      "ans1": "A. /b/",
+      "ans2": "B. /p/",
+      "ans3": "C. /ʃ/",
+      "ans4": "D. /h/",
       "audioLink":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/p/pen/pen__/pen__gb_2.mp3" ,
       "indexCorrectAns": 2,
       "type":"singleOnset"
@@ -36,10 +36,10 @@
     {
       "mainWord": "Listen and Choose the right single onset for ",
       "syllable":"/...ʌn/",
-      "ans1": "A. t /t/",
-      "ans2": "B. f /f/",
-      "ans3": "C. s /s/",
-      "ans4": "D. ʃ / ʃ/",
+      "ans1": "A. /t/",
+      "ans2": "B. /f/",
+      "ans3": "C. /s/",
+      "ans4": "D. /ʃ/",
       "audioLink": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/sun/sun__/sun__gb_2.mp3",
       "indexCorrectAns": 3,
       "type":"singleOnset"
@@ -47,10 +47,10 @@
     {
       "mainWord": "Listen and Choose the right double onset for ",
       "syllable":"/...ɒɡ/",
-      "ans1": "A. pl /pl/",
-      "ans2": "B. bl /bl/",
-      "ans3": "C. fr /fr/",
-      "ans4": "D. gl /gl/",
+      "ans1": "A. /pl/",
+      "ans2": "B. /bl/",
+      "ans3": "C. /fr/",
+      "ans4": "D. /gl/",
       "audioLink": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/f/fro/frog_/frog__gb_2.mp3",
       "indexCorrectAns": 3,
       "type":"doubleOnset"
@@ -58,10 +58,10 @@
     {
       "mainWord": "Listen and Choose the right double onset for ",
       "syllable":"/...ed/",
-      "ans1": "A. sl /sl/",
-      "ans2": "B. bl /bl/",
-      "ans3": "C. pl /pl/",
-      "ans4": "D. sp /sp/",
+      "ans1": "A. /sl/",
+      "ans2": "B. /bl/",
+      "ans3": "C. /pl/",
+      "ans4": "D. /sp/",
       "audioLink": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/spe/speed/speed__gb_1.mp3",
       "indexCorrectAns": 4,
       "type":"doubleOnset"
@@ -69,10 +69,10 @@
     {
       "mainWord": "Listen and Choose the right double onset for ",
       "syllable":"/...æp/",
-      "ans1": "A. sn /sn/",
-      "ans2": "B. gr /gr/",
-      "ans3": "C. sm /sm/",
-      "ans4": "D. sl /sl/",
+      "ans1": "A. /sn/",
+      "ans2": "B. /gr/",
+      "ans3": "C. /sm/",
+      "ans4": "D. /sl/",
       "audioLink": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/sna/snap_/snap__gb_1.mp3", 
       "indexCorrectAns": 1,
       "type":"doubleOnset"
@@ -80,10 +80,10 @@
     {
       "mainWord": "Listen and Choose the right triple onset for ",
       "syllable":"/...eɪn/",
-      "ans1": "A. spr /spr",
-      "ans2": "B. str /str/",
-      "ans3": "C. /spl /spl/",
-      "ans4": "D. sml /sml/",
+      "ans1": "A. /spr",
+      "ans2": "B. /str/",
+      "ans3": "C. /spl/",
+      "ans4": "D. /sml/",
       "audioLink": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/str/strai/strain__gb_1.mp3",
       "indexCorrectAns": 2,
       "type":"tripleOnset"
@@ -91,10 +91,10 @@
     {
       "mainWord": "Listen and Choose the right triple onset for ",
       "syllable":"/...ɪŋ/",
-      "ans1": "A. scr /skr/",
-      "ans2": "B. str /str/",
-      "ans3": "C. spr /spr/",
-      "ans4": "D. spl /spl/",
+      "ans1": "A. /skr/",
+      "ans2": "B. /str/",
+      "ans3": "C. /spr/",
+      "ans4": "D. /spl/",
       "audioLink": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/spr/sprin/spring__gb_1.mp3",
       "indexCorrectAns": 3,
       "type":"tripleOnset"
@@ -102,10 +102,10 @@
     {
       "mainWord": "Listen and Choose the right triple onset for ",
       "syllable":"/...iːt/",
-      "ans1": "A. str /str/",
-      "ans2": "B. spl /spl/",
-      "ans3": "C. sch /stʃ/",
-      "ans4": "D. scr /skr/",
+      "ans1": "A. /str/",
+      "ans2": "B. /spl/",
+      "ans3": "C. /stʃ/",
+      "ans4": "D. /skr/",
       "audioLink": "https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/str/stree/street__gb_3.mp3",
       "indexCorrectAns": 1,
       "type":"tripleOnset"
