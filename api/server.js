@@ -3,13 +3,13 @@ const jsonServer = require('json-server')
 const axios = require('axios');
 const cron = require('node-cron'); // Cài đặt cronJob
 const { parseHTML } = require('linkedom');
+const path = require('path');
 const server = jsonServer.create()
 require('dotenv').config();
 const { GoogleGenAI } = require('@google/genai');
 
 // Uncomment to allow write operations
 // const fs = require('fs')
-// const path = require('path')
 // const filePath = path.join('db.json')
 // const data = fs.readFileSync(filePath, "utf-8");
 // const db = JSON.parse(data);
@@ -19,7 +19,33 @@ const { GoogleGenAI } = require('@google/genai');
 const router = jsonServer.router('db.json')
 const { getInstructor } = require('./config');
 
-const middlewares = jsonServer.defaults()
+// Automatically prepend URL_BE to relative audio links from db.json
+router.render = (req, res) => {
+    const baseUrl = process.env.URL_BE || '';
+    let data = res.locals.data;
+
+    const attachBaseUrl = (item) => {
+        if (!item || typeof item !== 'object') return item;
+        const newItem = { ...item };
+        if (newItem.audio && newItem.audio.startsWith('/audio/')) {
+            newItem.audio = `${baseUrl}${newItem.audio}`;
+        }
+        if (newItem.audioLink && newItem.audioLink.startsWith('/audio/')) {
+            newItem.audioLink = `${baseUrl}${newItem.audioLink}`;
+        }
+        return newItem;
+    };
+
+    if (Array.isArray(data)) {
+        data = data.map(attachBaseUrl);
+    } else if (data && typeof data === 'object') {
+        data = attachBaseUrl(data);
+    }
+
+    res.jsonp(data);
+};
+
+const middlewares = jsonServer.defaults({ static: path.join(__dirname, '../public') })
 
 let indexKey = 0;
 let indexErrorVnKey=0;

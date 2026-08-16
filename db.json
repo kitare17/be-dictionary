@@ -113,49 +113,94 @@
   ],
   "quiz2": [
     {
-      "word" :"representative",
-      "syllable":"/ˌr__.pr__ˈz__n.t__.t__v/",
-      "syllable_final":"/ˌre.prɪ.ˈzen.tə.tɪv/",
+      "word": "representative",
+      "syllable": "/ˌr__.pr__ˈz__n.t__.t__v/",
+      "syllable_final": "/ˌre.prɪ.ˈzen.tə.tɪv/",
       "nucleusArray": ["e", "iː", "ɪ", "uː", "ɑː", "e", "ɜː", "ə", "iː", "ɪ"],
-      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/r/rep/repre/representative__gb_3.mp3",
-      "key":"eɪeəɪ",
-      "word_mean":[ { "type": "noun (n)", "meaning": "người đại diện, đại biểu" },{ "type": "adjective (adj)", "meaning": "đại diện, tiêu biểu, đặc trưng" }]
+      "audio": "/audio/representative__gb_3.mp3",
+      "key": "eɪeəɪ",
+      "word_mean":[{"type":"noun (n)","meaning":"người đại diện, đại biểu"},{"type":"adjective (adj)","meaning":"đại diện, tiêu biểu, đặc trưng"}]
     },
     {
       "word": "doctor",
-      "syllable": "/ˈd__k.t__ (r)/",
+      "syllable": "/ˈd__.k.t__(r)/",
       "syllable_final": "/ˈdɒk.tə(r)/",
       "nucleusArray": ["ɔː", "ʌ", "ɒ", "uː", "e", "ə", "æ", "ɜː"],
-      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/d/doc/docto/doctor__gb_2.mp3",
+      "audio": "/audio/doctor__gb_2.mp3",
       "key": "ɒə",
-      "word_mean": [{ "type": "noun (n)", "meaning": "bác sĩ; tiến sĩ" }]
+      "word_mean":[{"type":"noun (n)","meaning":"bác sĩ; tiến sĩ"}]
     },
     {
       "word": "ethnic",
-      "syllable": "/ˈ__θ.n__k/",
+      "syllable": "/ˈ__.θ.n__k/",
       "syllable_final": "/ˈeθ.nɪk/",
       "nucleusArray": ["ɔː", "e", "ɒ", "uː", "iː", "ə", "æ", "ɪ"],
-      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/e/eth/ethni/ethnic__gb_2.mp3",
+      "audio": "/audio/ethnic__gb_2.mp3",
       "key": "eɪ",
-      "word_mean": [{ "type": "adjective (adj)", "meaning": "thuộc dân tộc, thuộc sắc tộc" }]
+      "word_mean":[{"type":"adjective (adj)","meaning":"thuộc dân tộc, thuộc sắc tộc"}]
     },
     {
       "word": "disastrous",
       "syllable": "/d__.ˈz__s.tr__s/",
       "syllable_final": "/dɪ.ˈzæs.trəs/",
       "nucleusArray": ["iː", "e", "ɒ", "ɜː", "iː", "ə", "æ", "ɪ"],
-      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/d/dis/disas/disastrous__gb_3.mp3",
+      "audio": "/audio/disastrous__us_1.mp3",
       "key": "ɪæə",
-      "word_mean": [{ "type": "adjective (adj)", "meaning": "thảm họa, tai hại, gây hậu quả nghiêm trọng" }]
+      "word_mean":[{"type":"adjective (adj)","meaning":"thảm họa, tai hại, gây hậu quả nghiêm trọng"}]
     },
     {
       "word": "indivisibility",
       "syllable": "/ˌ__n.d__ˌv__z__ˈb__l.__t__/",
       "syllable_final": "/ˌɪn.dɪˌvɪ.zə.ˈbɪl.ə.ti/",
       "nucleusArray": ["ɪ", "ɔː", "ɪ", "ə", "iː", "ɪ", "ə", "ɪ", "ɜː", "ɪ", "iː"],
-      "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/i/ind/indiv/indivisibility__gb_1.mp3",
+      "audio": "/audio/indivisibility__gb_1.mp3",
       "key": "ɪɪɪəɪəɪ",
-      "word_mean": [{ "type": "noun (n)", "meaning": "tính không thể chia tách, tính không thể phân chia" }]
+      "word_mean":[{"type":"noun (n)","meaning":"tính không thể chia tách, tính không thể phân chia"}]
+    },
+    {
+      "word": "transportation",
+      "syllable": "/ˌtr__n.sp__ˈt__.ʃ__n/",
+      "syllable_final": "/ˌtræn.spɔːˈteɪ.ʃən/",
+      "nucleusArray": ["æ", "ɑː", "ɔː", "ɒ", "e", "eɪ", "ə", "aɪ"],
+      "audio": "/audio/transportation__gb_2.mp3",
+      "key": "æɔːeɪə",
+      "word_mean":[{"type":"noun (n)","meaning":"sự vận chuyển, sự chuyên chở; giao thông vận tải"}]
+    },
+    {
+      "word": "misunderstanding",
+      "syllable": "/ˌm__.s__n.d__ˈst__n.d__ŋ/",
+      "syllable_final": "/ˌmɪ.sʌn.dəˈstæn.dɪŋ/",
+      "nucleusArray": ["ɪ", "iː", "ə", "ɑː", "ɑː", "æ", "ʌ", "ɪ", "ə"],
+      "audio": "/audio/misunderstanding__gb_1.mp3",
+      "key": "ɪʌəæɪ",
+      "word_mean":[{"type":"noun (n)","meaning":"sự hiểu lầm, sự hiểu sai"}]
+    },
+    {
+      "word": "intercontinental",
+      "syllable": "/ˌ__nt__.ˌk__nt__ˈn__nt__/",
+      "syllable_final": "/ˌɪntəˌkɒntɪˈnentl/",
+      "nucleusArray": ["ɪ", "iː", "e", "ɒ", "ɔː", "ʌ", "ɪ", "ə", "l", "ɜː"],
+      "audio": "/audio/intercontinental__gb_1.mp3",
+      "key": "ɪəɒɪel",
+      "word_mean":[{"type":"adjective (adj)","meaning":"liên lục địa; giữa các lục địa"}]
+    },
+    {
+      "word": "country",
+      "syllable": "/ˈk__n.tr__/",
+      "syllable_final": "/ˈkʌn.tri/",
+      "nucleusArray": ["ɪ", "iː", "e", "ʌ", "ɪ", "ə", "l", "ɜː", "y"],
+      "audio": "/audio/country__gb_3.mp3",
+      "key": "ʌɪ",
+      "word_mean":[{"type":"noun (n)","meaning":"đất nước, quốc gia; vùng nông thôn, miền quê"}]
+    },
+    {
+      "word": "complicated",
+      "syllable": "/ˈk__mpl__k__t__d/",
+      "syllable_final": "/ˈkɒmplɪkeɪtɪd/",
+      "nucleusArray": ["ɪ", "iː", "e", "eɪ", "ʌ", "ɪ", "ə", "aɪ", "ɜː", "ɒ", "ɔː"],
+      "audio": "/audio/complicated__gb_1.mp3",
+      "key": "ɒɪeɪɪ",
+      "word_mean":[{"type":"adjective (adj)","meaning":"phức tạp, rắc rối; khó hiểu"}]
     }
   ],
   "quiz3":[
