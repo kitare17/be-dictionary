@@ -152,9 +152,9 @@
       "word": "indivisibility",
       "syllable": "/ˌ__n.d__ˌv__z__ˈb__l.__t__/",
       "syllable_final": "/ˌɪn.dɪˌvɪ.zə.ˈbɪl.ə.ti/",
-      "nucleusArray": ["ɪ", "ɔː", "ɪ", "ə", "iː", "ɪ", "ə", "ɪ", "ɜː", "ɪ", "iː"],
+      "nucleusArray": ["ɪ", "ɔː", "ɪ", "ə", "iː", "ɪ", "ə", "ɪ", "ɜː", "i", "iː"],
       "audio": "/audio/indivisibility__gb_1.mp3",
-      "key": "ɪɪɪəɪəɪ",
+      "key": "ɪɪɪəɪəi",
       "word_mean":[{"type":"noun (n)","meaning":"tính không thể chia tách, tính không thể phân chia"}]
     },
     {
@@ -188,9 +188,9 @@
       "word": "country",
       "syllable": "/ˈk__n.tr__/",
       "syllable_final": "/ˈkʌn.tri/",
-      "nucleusArray": ["ɪ", "iː", "e", "ʌ", "ɪ", "ə", "l", "ɜː", "y"],
+      "nucleusArray": ["ɪ", "iː", "e", "ʌ", "i", "ə", "l", "ɜː", "y"],
       "audio": "/audio/country__gb_3.mp3",
-      "key": "ʌɪ",
+      "key": "ʌi",
       "word_mean":[{"type":"noun (n)","meaning":"đất nước, quốc gia; vùng nông thôn, miền quê"}]
     },
     {
