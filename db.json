@@ -177,8 +177,8 @@
     },
     {
       "word": "intercontinental",
-      "syllable": "/ˌ__nt__.ˌk__nt__ˈn__nt__/",
-      "syllable_final": "/ˌɪntəˌkɒntɪˈnentl/",
+      "syllable": "/ˌ__nt__.ˌk__nt__ˈn__n.t__/",
+      "syllable_final": "/ˌɪntəˌkɒntɪˈnen.tl/",
       "nucleusArray": ["ɪ", "iː", "e", "ɒ", "ɔː", "ʌ", "ɪ", "ə", "l", "ɜː"],
       "audio": "/audio/intercontinental__gb_1.mp3",
       "key": "ɪəɒɪel",
@@ -261,7 +261,7 @@
     {
       "word":"prompt",
       "syllable":"/prɒ__ __ __/",
-      "syllable_final":"/prɑmpt/",
+      "syllable_final":"/prɒmpt/",
       "nucleusArray":["m","f","ŋ","s","b","c","p","dʒ","ʒ","t"],
       "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/p/pro/promp/prompt__gb_1.mp3",
       "key":"mpt",
@@ -279,7 +279,7 @@
     {
       "word":"tempt",
       "syllable":"/te__ __ __/",
-      "syllable_final":"/tɛmpt/",
+      "syllable_final":"/tempt/",
       "nucleusArray":["k","m","f","x","n","θ","p","ŋ","ʃ","dʒ","ʒ","t"],
       "audio":"https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/t/tem/tempt/tempt__gb_1.mp3",
       "key":"mpt",
